@@ -1,0 +1,38 @@
+@import "./styles/variables";
+
+@keyframes glowingBackground {
+  0% {
+    background-color: transparentize($glow, 1);
+  }
+  50% {
+    background-color: transparentize($glow, 0.8);
+  }
+  100% {
+    background-color: transparentize($glow, 1);
+  }
+}
+
+.main {
+  min-height: 70vh;
+  color: $white80;
+  h2 {
+    text-align: center;
+    a {
+      color: $brightBlue;
+      font-family: $fingerPaint;
+    }
+  }
+  .imageHolder {
+    margin: 0 auto;
+    position: relative;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    cursor: pointer;
+    > div {
+      border-radius: 50%;
+      background-color: transparentize($glow, 1);
+      animation: glowingBackground 3s infinite;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+@import "../../styles/variables";
+
+.main {
+  margin: 10px;
+  select {
+    font-size: $medium-font-size;
+    color: $dark;
+    text-indent: 3px;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+  }
+  .filterName {
+    font-style: italic;
+    font-size: $medium-font-size;
+    color: $white80;
+  }
+}

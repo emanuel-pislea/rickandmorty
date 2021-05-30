@@ -1,0 +1,123 @@
+@import "./styles/variables";
+
+.filters {
+  max-width: 500px;
+  background: $white9;
+  margin: 0 auto;
+  text-align: left;
+  border: 1px solid $brightBlue;
+  padding: 15px 10px;
+  border-radius: 25px;
+  .resetFilters {
+    text-align: center;
+    a {
+      color: $brightBlue;
+      font-size: $normal-font-size;
+      font-family: $fingerPaint;
+      text-shadow: 0px 0px 1px $glowShadow;
+    }
+  }
+}
+.mainTitle {
+  color: $white80;
+  text-align: center;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  font-family: $fingerPaint;
+  margin: 60px auto 20px auto;
+  width: 220px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid $brightBlue;
+}
+.grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 1rem auto;
+  width: 90vw;
+  .card {
+    margin: 1rem;
+    padding: 1.5rem;
+    text-align: left;
+    color: inherit;
+    border-radius: 20px;
+    border: 1px solid $brightBlue;
+    transition: transform 0.25s ease;
+    width: 45%;
+    max-width: 365px;
+    min-width: 320px;
+    background: $white9;
+    color: white;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+    .seeMore {
+      color: $white80;
+      position: relative;
+      text-align: center;
+      padding: 10px 14px;
+      border-radius: 18px;
+      background: $brightBlue;
+      width: 150px;
+      margin: 0 auto;
+      font-weight: 600;
+      &:after {
+        content: "";
+        position: absolute;
+        top: 12px;
+        right: -15px;
+        width: 0;
+        height: 0;
+        border-top: solid 14px $brightBlue;
+        border-left: solid 14px transparent;
+        border-right: solid 14px transparent;
+        border-radius: 5px;
+        transform: rotate(-90deg);
+        transition: all 0.3s ease-in;
+      }
+    }
+    &:hover {
+      .seeMore {
+        &:after {
+          border-top: solid 14px $white80;
+          transform: rotate(90deg);
+          right: -4px;
+        }
+      }
+    }
+  }
+}
+.pagination {
+  min-width: 300px;
+  font-size: $large-font-size;
+  margin: 35px auto;
+  color: $brightBlue;
+  text-shadow: 0px 0px 2px $glowShadow;
+  font-family: $fingerPaint;
+  display: flex;
+  justify-content: center;
+  > div {
+    cursor: pointer;
+    transition: transform 0.25s ease;
+    padding: 10px;
+    border-radius: 10px;
+    background: $white9;
+
+    &:nth-of-type(2) {
+      margin-left: 40px;
+    }
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .filters {
+    width: 85vw;
+    text-align: center;
+  }
+}

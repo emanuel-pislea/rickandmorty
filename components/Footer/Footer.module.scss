@@ -1,0 +1,30 @@
+@import "../../styles/variables";
+
+.main {
+  display: flex;
+  min-height: 170px;
+  margin-top: 25px;
+  background: $white9;
+  backdrop-filter: blur(10px);
+  color: $white80;
+  padding: 30px;
+  .author {
+    h4 {
+      color: $brightBlue;
+      cursor: pointer;
+    }
+    flex: 1;
+    .social {
+      display: inline-block;
+      margin-right: 20px;
+    }
+  }
+  .copyright {
+    flex: 1;
+    color: $grey;
+    padding: 15px;
+    a {
+      color: $brightBlue;
+    }
+  }
+}
